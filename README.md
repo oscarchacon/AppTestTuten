@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+Llegar y usar, inicia el siguiente comando `npm install` y luego `ng serve`
+
 ## Componentes Utilizados
 
 `bootstrap 4` -> `npm install --save bootstrap4`  
