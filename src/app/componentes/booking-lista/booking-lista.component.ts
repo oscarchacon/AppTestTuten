@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BookingService } from '../_services/booking.service';
+import { Booking } from '../_classes/booking';
 
 @Component({
   selector: 'app-booking-lista',
@@ -7,9 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingListaComponent implements OnInit {
 
-  constructor() { }
+  loadingTable: boolean = false;
+  bookings: Booking[] = [];
+
+  bookingId: string;
+  precioMin: number;
+  precioMay: number;
+
+  constructor(private bookingService: BookingService) { }
 
   ngOnInit() {
+    this.getBookings();
+  }
+
+  getBookings(): void {
+    this.loadingTable = true;
+    this.bookingService.getBookins()
+      .subscribe(
+        data => {
+          this.bookings = data;
+        },
+        error => {
+          this.loadingTable = false;
+        },
+        () => {
+          this.loadingTable = false;
+        }
+      );
   }
 
 }

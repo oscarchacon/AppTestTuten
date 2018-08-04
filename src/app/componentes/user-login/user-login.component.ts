@@ -29,7 +29,7 @@ export class UserLoginComponent implements OnInit {
         // this.userService.getUsuarioAutenticado().subscribe(
         //     x => {
         this.loading = false;
-        //this.router.navigate(['./lista']);
+        this.router.navigate(['./lista']);
         // }
         // );
       },

@@ -2,6 +2,32 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+## Componentes Utilizados
+
+`bootstrap 4` -> `npm install --save bootstrap4`
+`momentjs` -> `npm install --save moment`
+`font awesome` -> `npm install --save font-awesome`
+`ngx-bootstrap` -> `npm install --save ngx-bootstrap`
+`rxjs-compat` -> `npm install --save rxjs-compat`
+`rxjs` -> `npm install --save rxjs`
+
+Agregar las siguientes lineas en `styles` del archivo `angular.json`
+`"node_modules/bootstrap/dist/css/bootstrap.min.css"`
+`"node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"`
+`"node_modules/font-awesome/css/font-awesome.css"`
+
+Usar angular/cli 6.0.8 y nodejs 10.0.7, junto con npm 6.2
+
+## Consideraciones
+
+El proyecto esta compuesto por la carpeta `componentes`
+En la cual tiene `_classes` : las clases que se utilizarán
+`_services`: servicios utilizados
+`_helpers` distintos componentes, como servicios, módulos, directivas
+`pipes`: distinos pipes para hacer filtro o mostrar información correctamente
+`booking-lista` y `user-login`: carpetas con componentes para el uso de la app.
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

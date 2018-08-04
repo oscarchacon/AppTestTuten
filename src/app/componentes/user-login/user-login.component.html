@@ -4,11 +4,11 @@
     <form class="m-t" role="form" action="../" method="get" (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
       <div class="form-group">
         <input type="email" class="form-control" placeholder="E-mail" name="usuario" required="required" [(ngModel)]="loginForm.usuario"
-          #usuario="ngModel" />
+          #usuario="ngModel" [disabled]="loading" />
       </div>
       <div class="form-group">
         <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" required="required" [(ngModel)]="loginForm.password"
-          #password="ngModel" />
+          #password="ngModel" [disabled]="loading" />
       </div>
       <div class="form-group">
         <button [disabled]="loading" type="submit" class="btn btn-primary block full-width m-b">

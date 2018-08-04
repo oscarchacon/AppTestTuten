@@ -1,4 +1,4 @@
 export class UserClient {
   firstName: string;
-  LastName: string;
+  lastName: string;
 }

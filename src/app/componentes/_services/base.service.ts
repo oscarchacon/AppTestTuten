@@ -16,12 +16,23 @@ export class BaseService {
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
+  // private httpOptions;
 
   constructor(
     protected http: HttpClient,
 
   ) {
     this.baseUrl = environment.baseUrl;
+    /*const data = JSON.parse(localStorage.getItem('gTdhs%HJ324SDgd'));
+    let headers = new HttpHeaders ({ 'Content-Type': 'application/json' });
+    if (data) {
+      headers = headers.set('App', 'APP_BCK')
+                       .set( 'token', data.sessionTokenBck)
+                       .set('adminemail', data.email);
+    }
+
+    this.httpOptions = { headers: headers};
+    console.log(this.httpOptions);*/ //SE USO INTERCEPTOR
   }
 
   private log(message: string) {

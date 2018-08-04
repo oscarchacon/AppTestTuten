@@ -12,7 +12,7 @@ import { Observable } from 'rxjs/Observable';
 export class RequestInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const data = JSON.parse(localStorage.getItem('gTdhs%HJ324SDgd'));
-    console.log(data);
+    //console.log(data);
     if (data) {
       request = request.clone({
         setHeaders: {
